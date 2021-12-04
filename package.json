@@ -1,0 +1,15 @@
+{
+    "name": "web-technology.cw1.it-freelance",
+    "version": "1.0.0",
+    "description": "Making an IT freelance website",
+    "main": "app.js",
+    "keywords": [
+      "IT-freelance",
+      "html",
+      "css",
+      "javascript"
+    ],
+    "author": "00012256",
+    "license": "ISC"
+  }
+  
