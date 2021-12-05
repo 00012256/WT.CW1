@@ -7,8 +7,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+  <div id="scrollTop" class="scrollTop"></div>
+
     <!-- create header section -->
     <header class="header">
         <nav class="navbar">
@@ -30,7 +33,7 @@
                     <a href="about.html" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="contacts.html" class="nav-link">Contacts</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
                 </li>
             </ul>
             <!-- craete hamburger menu for smaller screen sizes -->
@@ -41,6 +44,168 @@
             </div>
         </nav>
     </header>
+    <div class="disclaimer">
+        <p>This website was created to fulfill Web Technology module’s requirements and does not
+        represent an actual company or service</p>
+    </div>
+
+    <!-- start the intro section -->
+    <section class="section intro">
+        <div class="intro-container">
+            <div class="intro-block">
+                <div class="intro-text">
+                    <h1>Advance your business</h1>
+                    <p>We are ready to help you grow your business by means of advertisement, promotion, developing a website for your company, and other modern business development tools.</p>
+                    <a class="call-to-action" href="contact.html">
+                        submit your application
+                        <span></span>
+                    </a>
+                </div>
+                <div class="intro-img">
+                    <img src="images/growth.png" alt="">
+                </div>
+            </div>
+            <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 200" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(12, 15, 56, 1)" offset="0%"></stop><stop stop-color="rgba(12, 15, 56, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,100L40,86.7C80,73,160,47,240,60C320,73,400,127,480,140C560,153,640,127,720,100C800,73,880,47,960,53.3C1040,60,1120,100,1200,113.3C1280,127,1360,113,1440,103.3C1520,93,1600,87,1680,86.7C1760,87,1840,93,1920,96.7C2000,100,2080,100,2160,100C2240,100,2320,100,2400,106.7C2480,113,2560,127,2640,140C2720,153,2800,167,2880,150C2960,133,3040,87,3120,70C3200,53,3280,67,3360,63.3C3440,60,3520,40,3600,40C3680,40,3760,60,3840,86.7C3920,113,4000,147,4080,160C4160,173,4240,167,4320,153.3C4400,140,4480,120,4560,103.3C4640,87,4720,73,4800,80C4880,87,4960,113,5040,130C5120,147,5200,153,5280,143.3C5360,133,5440,107,5520,103.3C5600,100,5680,120,5720,130L5760,140L5760,200L5720,200C5680,200,5600,200,5520,200C5440,200,5360,200,5280,200C5200,200,5120,200,5040,200C4960,200,4880,200,4800,200C4720,200,4640,200,4560,200C4480,200,4400,200,4320,200C4240,200,4160,200,4080,200C4000,200,3920,200,3840,200C3760,200,3680,200,3600,200C3520,200,3440,200,3360,200C3280,200,3200,200,3120,200C3040,200,2960,200,2880,200C2800,200,2720,200,2640,200C2560,200,2480,200,2400,200C2320,200,2240,200,2160,200C2080,200,2000,200,1920,200C1840,200,1760,200,1680,200C1600,200,1520,200,1440,200C1360,200,1280,200,1200,200C1120,200,1040,200,960,200C880,200,800,200,720,200C640,200,560,200,480,200C400,200,320,200,240,200C160,200,80,200,40,200L0,200Z"></path></svg>
+        </div>
+    </section>
+
+    <!-- start the advantages section -->
+    <section class="advantages">
+      <div class="advantages-text">
+        <h3>Our advantages</h3>
+        <div class="heading-line"></div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h4>Quality</h4>
+          <p>We always make outstanding design and pixel-perfect implementation of it into the website for your business.</p>
+        </div>
+        <div class="card">
+          <h4>Convenience</h4>
+          <p>The websites we make are always effortless for the adminstrator to maintain and easy for the end user to understand.</p>
+        </div>
+        <div class="card">
+          <h4>Special approach</h4>
+          <p>We approach each project differently, taking into account the specifics of the given situation.</p>
+        </div>
+        <div class="card">
+          <h4>In-time completion</h4>
+          <p>With us you never have to worry about the completion of your order. It will be ready before the set deadline!</p>
+        </div>
+        <div class="card">
+          <h4>Expertise</h4>
+          <p>Our team is comprised of highly skilled individuals who love what they do.</p>
+        </div>
+        <div class="card">
+          <h4>Affordable prices</h4>
+          <p>Who does not love quality products at low costs? Of course we offer you reasonable prices for your projects.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- start the companies section -->
+    <section class="companies">
+        <div class="container">
+          <div class="row">
+            <h3>Trusted by companies like</h3>
+            <div class="heading-line"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="company-row">
+            <div class="company">
+              <div class="company-logo">
+                <img src="images/logoipsum1.svg" alt="Company 1 logo" title="Company 1 Logo">
+              </div>
+            </div>
+            <div class="company">
+              <div class="company-logo">
+                <img src="images/logoipsum2.svg" alt="Company 2 logo" title="Company 2 Logo">
+              </div>
+            </div>
+            <div class="company">
+              <div class="company-logo">
+                <img src="images/logoipsum3.svg" alt="Company 3 logo" title="Company 3 Logo">
+              </div>
+            </div>
+            <div class="company">
+              <div class="company-logo">
+                <img src="images/logoipsum4.svg" alt="Company 4 logo" title="Company 4 Logo">
+              </div>
+            </div>
+            <div class="company">
+              <div class="company-logo">
+                <img src="images/logoipsum5.svg" alt="Company 5 logo" title="Company 5 Logo">
+              </div>
+            </div>
+            <div class="company">
+              <div class="company-logo">
+                <img src="images/logoipsum6.svg" alt="Company 6 logo" title="Company 6 Logo">
+              </div>
+            </div>
+            <div class="company">
+                <div class="company-logo">
+                  <img src="images/logoipsum7.svg" alt="Company 7 logo" title="Company 7 Logo">
+                </div>
+              </div>
+              <div class="company">
+                <div class="company-logo">
+                  <img src="images/logoipsum8.svg" alt="Company 8 logo" title="Company 8 Logo">
+                </div>
+              </div>
+              <div class="company">
+                <div class="company-logo">
+                  <img src="images/logoipsum9.svg" alt="Company 9 logo" title="Company 9 Logo">
+                </div>
+              </div>
+              <div class="company">
+                <div class="company-logo">
+                  <img src="images/logoipsum10.svg" alt="Company 10 logo" title="Company 10 Logo">
+                </div>
+              </div>
+              <div class="company">
+                <div class="company-logo">
+                  <img src="images/logoipsum11.svg" alt="Company 11 logo" title="Company 11 Logo">
+                </div>
+              </div>
+              <div class="company">
+                <div class="company-logo">
+                  <img src="images/logoipsum12.svg" alt="Company 12 logo" title="Company 12 Logo">
+                </div>
+              </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- start the footer section -->
+    <footer>
+      <div class="top_header">
+        <section>
+          <span><i class="fa fa-map-marker"></i></span>
+          <span>Tashkent, Street Name, Building</span>
+        </section>
+        <section>
+          <span><i class="fa fa-phone"></i></span>
+          <span>+998 99 999 99 99</span>
+        </section>
+        <section>
+          <span><i class="fa fa-envelope"></i></span>
+          <span>info@topweb.com</span>
+        </section>
+      </div>
+      <span class="border-shape"></span>
+      <div class="bottom_content">
+        <section>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-telegram"></i></a>
+        </section>
+      </div>
+      <div class="copyright">
+        Copyright © 2021 TopWeb - All rights reserved 
+      </div>
+    </footer>
 
     <script src="app.js"></script>
 </body>
