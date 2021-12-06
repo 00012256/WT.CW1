@@ -287,6 +287,7 @@ header a {
     box-shadow: 4px 8px 18px #777;
     text-align: center;
     position: relative;
+    transition: all 0.1s ease-in-out;
 }
 
 .company:hover {
@@ -390,7 +391,7 @@ header a {
     opacity: 0;
     transition: 0.5s;
 }
-.scrollTop.active {
+.scrollTop.active-top {
     bottom: 0.8rem;
     visibility: visible;
     opacity: 1;
