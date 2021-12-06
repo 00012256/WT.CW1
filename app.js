@@ -2,18 +2,14 @@ const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const navLink = document.querySelectorAll(".nav-link");
 
-// back to top button
-window.addEventListener('scroll', function() {
-  var scroll = document.querySelector('.scrollTop')
-  scroll.classList.toggle("active", window.scrollY > 500)
+// add active-link class to current page
+const activePage = window.location.pathname;
+navLink.forEach(link => {
+  if(link.href.includes(`${activePage}`)){
+    link.classList.add('active-link');
+    console.log(link);
+  }
 })
-
-document.getElementById('scrollTop').addEventListener('click', function () {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  })
-});
 
 // add active class in smaller screens
 hamburger.addEventListener("click", mobileMenu);
@@ -29,11 +25,15 @@ function closeMenu() {
     navMenu.classList.remove("active");
 }
 
-// add active-link class to current page
-const activePage = window.location.pathname;
-navLink.forEach(link => {
-  if(link.href.includes(`${activePage}`)){
-    link.classList.add('active-link');
-    console.log(link);
-  }
+// back to top button
+window.addEventListener('scroll', function() {
+  var scroll = document.querySelector('.scrollTop')
+  scroll.classList.toggle("active-top", window.scrollY > 500)
 })
+
+document.getElementById('scrollTop').addEventListener('click', function () {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+});
