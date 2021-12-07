@@ -37,3 +37,188 @@ document.getElementById('scrollTop').addEventListener('click', function () {
     behavior: 'smooth'
   })
 });
+
+// portfolio section buttons
+const btnAll = document.getElementById('btnAll')
+const btnWeb = document.getElementById('btnWeb');
+const btnAdvertising = document.getElementById('btnAdvertising');
+const btnSmm = document.getElementById('btnSmm');
+const btnBusiness = document.getElementById('btnBusiness');
+
+const all = Array.from(document.querySelectorAll('.item'));
+const web = Array.from(document.querySelectorAll('.web'));
+const advertising = Array.from(document.querySelectorAll('.advertising'));
+const smm = Array.from(document.querySelectorAll('.smm'));
+const business = Array.from(document.querySelectorAll('.business'));
+
+btnAll.addEventListener('click', function() {
+    all.forEach(item => {
+        item.style.display = "inline-block"
+    })
+})
+
+btnWeb.addEventListener('click', function() {
+    web.forEach(item => {
+        item.style.display = "inline-block";
+    });
+    advertising.forEach(item => {
+        item.style.display = "none"
+    });
+    smm.forEach(item => {
+        item.style.display = "none"
+    })
+    business.forEach(item => {
+      item.style.display = "none"
+  })
+})
+
+btnAdvertising.addEventListener('click', function() {
+    web.forEach(item => {
+        item.style.display = "none";
+    });
+    advertising.forEach(item => {
+        item.style.display = "inline-block"
+    });
+    smm.forEach(item => {
+        item.style.display = "none"
+    })
+    business.forEach(item => {
+      item.style.display = "none"
+  })
+})
+
+btnSmm.addEventListener('click', function() {
+    web.forEach(item => {
+        item.style.display = "none";
+    });
+    advertising.forEach(item => {
+        item.style.display = "none"
+    });
+    smm.forEach(item => {
+        item.style.display = "inline-block"
+    })
+    business.forEach(item => {
+      item.style.display = "none"
+  })
+})
+
+btnBusiness.addEventListener('click', function() {
+  web.forEach(item => {
+      item.style.display = "none";
+  });
+  advertising.forEach(item => {
+      item.style.display = "none"
+  });
+  smm.forEach(item => {
+      item.style.display = "none"
+  })
+  business.forEach(item => {
+    item.style.display = "inline-block"
+})
+})
+
+// add active-btn class to the current button
+let btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active-btn");
+    current[0].className = current[0].className.replace(" active-btn", "");
+    this.className += " active-btn";
+  });
+}
+
+const lorem60 = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, debitis laborum eveniet cumque odit qui ipsum alias doloribus voluptatibus harum magnam quod recusandae voluptatum nulla corrupti, eos reprehenderit? Ut quam, aut nihil rerum tenetur expedita culpa natus officia itaque provident harum fugiat, odit officiis excepturi labore doloremque! Libero rem, sequi expedita facilis eum tempore blanditiis repellat porro voluptatibus hic suscipit!"
+
+let modalInfo = {
+  1: {
+    title: "1 - project name",
+    info: lorem60
+  },
+  2: {
+    title: "2 - project name",
+    info: lorem60
+  },
+  3: {
+    title: "3 - project name",
+    info: lorem60
+  },
+  4: {
+    title: "4 - project name",
+    info: lorem60
+  },
+  5: {
+    title: "5 - project name",
+    info: lorem60
+  },
+  6: {
+    title: "6 - project name",
+    info: lorem60
+  },
+  7: {
+    title: "7 - project name",
+    info: lorem60
+    },
+  8: {
+    title: "8 - project name",
+    info: lorem60
+    },
+  9: {
+    title: "9 - project name",
+    info: lorem60
+    },
+  10: {
+    title: "10 - project name",
+    info: lorem60
+    },
+  11: {
+    title: "11 - project name",
+    info: lorem60
+    },
+  12: {
+    title: "12 - project name",
+    info: lorem60
+    },
+};
+
+// get modal
+var modal = document.getElementById('preview');
+
+// button that opens modal
+var btn = document.getElementsByClassName("button");
+
+// span that closes modal
+var span = document.getElementsByClassName("close")[0];
+
+// opening modal
+for(let i = 0; i < btn.length; i++){
+  btn[i].addEventListener("click", function() {
+    var project = btn[i].parentElement.parentElement.parentElement.parentElement;
+    openModal(project);
+  })
+};
+
+function openModal(project){
+  var id = project.id;
+  var img = project.getElementsByTagName("img")[0].src;
+  fillOut(id, img);
+  modal.style.display = "block";
+  document.getElementsByClassName("modal-content")[0].classList.add("scale");
+}
+
+function fillOut(id, img){
+  document.getElementById("title").innerHTML = modalInfo[id].title;
+  document.getElementById("info").innerHTML = modalInfo[id].info;
+  document.getElementById("img").src = img;
+}
+
+// closing modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
