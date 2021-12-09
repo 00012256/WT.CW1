@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="scrollTop" class="scrollTop"></div>
-    
+
     <!-- create header section -->
     <header class="header">
         <nav class="navbar">
@@ -55,26 +55,28 @@
             </div>
         </div>
         <div class="contact-main">
-            <div id="form">
+            <div id="form-block">
                 <div class="form">
                   <h4>Complete the form</h4>
-                  <form action="#" class="form-row">
+                  <form id="form" action="#" class="form-row">
                     <div class="name-number">
-                        <div>
-                            <input type="text" placeholder="Name" id="inputName">
+                        <div id="input-name-control" class="input-control">
+                            <input type="text" name="inputName" placeholder="Name" id="inputName">
+                            <div class="error"></div>
                         </div>
-                        <div>
+                        <div id="input-number-control" class="input-control">
                             <input type="number" placeholder="Phone number" id="inputTelNumber">
+                            <div class="error"></div>
                         </div>
                     </div>                   
-                    <div class="second">
+                    <div class="input-control">
                       <input type="email" placeholder="Email" id="inputEmail">
                     </div>
-                    <div class="third">
-                      <textarea name="message" placeholder="Message" id="message" rows="8"></textarea>
+                    <div class="input-control">
+                      <textarea name="message" placeholder="Message" id="message" rows="5"></textarea>
                     </div>
                     <div class="submit">
-                      <button type="button">
+                      <button type="submit">
                         Submit
                         <i class="fas fa-paper-plane"></i>
                         <span></span>
