@@ -15,11 +15,11 @@ html {
 }
 
 .intro, .advantages, .companies, .our-services,
-.portfolio, .about, .contact {
+.portfolio, .about, .contact, .pricing {
     background: linear-gradient(to right, rgb(6, 4, 95), rgba(12, 15, 56, 0.9))
 }
 
-.our-services, .portfolio, .about {
+.our-services, .portfolio, .about, .pricing {
     min-height: calc(100vh - 230px);
     padding: 6.8rem 0 3.5rem 0;
     padding-bottom: 4rem;
@@ -1055,6 +1055,8 @@ footer .bottom_content section{
     }
 }
 
+
+/* contact us page */
 .contact {
     min-height: calc(100vh - 230px);
 }
@@ -1120,7 +1122,7 @@ footer .bottom_content section{
     flex-direction: column;
 }
 
-#form-block, #info {
+#form-block, .contact #info {
     width: 40vw;
     height: 25rem;
     display: flex;
@@ -1195,12 +1197,12 @@ footer .bottom_content section{
     transform: scale(1.05);
 }
 
-#info {
+.contact #info {
     color: #fff;
     background-color: rgba(3, 112, 30, 0.8);
 }
 
-#info a {
+.contact #info a {
     text-decoration: none;
     color: #fff;
 }
@@ -1282,7 +1284,7 @@ footer .bottom_content section{
         object-fit: cover;
     }
 
-    #form-block, #info {
+    #form-block, .contact #info {
         width: 85vw;
     }
 
@@ -1308,7 +1310,7 @@ footer .bottom_content section{
         top: 15%;
     }
 
-    #form-block, #info {
+    #form-block, .contact #info {
         transform: translateY(-9rem);
     }
 
