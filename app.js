@@ -2,6 +2,25 @@ const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const navLink = document.querySelectorAll(".nav-link");
 
+const lorem60 = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, debitis laborum eveniet cumque odit qui ipsum alias doloribus voluptatibus harum magnam quod recusandae voluptatum nulla corrupti, eos reprehenderit? Ut quam, aut nihil rerum tenetur expedita culpa natus officia itaque provident harum fugiat, odit officiis excepturi labore doloremque! Libero rem, sequi expedita facilis eum tempore blanditiis repellat porro voluptatibus hic suscipit!";
+
+// portfolio section buttons
+const btnAll = document.getElementById('btnAll')
+const btnWeb = document.getElementById('btnWeb');
+const btnAdvertising = document.getElementById('btnAdvertising');
+const btnSmm = document.getElementById('btnSmm');
+const btnBusiness = document.getElementById('btnBusiness');
+
+const all = Array.from(document.querySelectorAll('.item'));
+const web = Array.from(document.querySelectorAll('.web'));
+const advertising = Array.from(document.querySelectorAll('.advertising'));
+const smm = Array.from(document.querySelectorAll('.smm'));
+const business = Array.from(document.querySelectorAll('.business'));
+
+const userName = document.getElementById('inputName');
+const userNumber = document.getElementById('inputTelNumber');
+const form = document.getElementById('form');
+
 // add active-link class to current page
 const activePage = window.location.pathname;
 navLink.forEach(link => {
@@ -10,6 +29,46 @@ navLink.forEach(link => {
     console.log(link);
   }
 })
+
+// form validation
+form.addEventListener('submit', e => {
+  e.preventDefault();
+
+  validateInputs();
+})
+
+const setError = (element, message) => {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector('.error');
+  errorDisplay.innerText = message;
+  inputControl.classList.add('error');
+  inputControl.classList.remove('success')
+}
+
+const setSuccess = element => {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector('.error');
+  errorDisplay.innerText = '';
+  inputControl.classList.add('success');
+  inputControl.classList.remove('error');
+}
+
+const validateInputs = () => {
+  const userNameValue = userName.value.trim();
+  const userNumberValue = userNumber.value.trim();
+
+  if (userNameValue === '') {
+    setError(userName, 'Name is required');
+  } else {
+      setSuccess(userName);
+  }
+
+  if (userNumberValue === '') {
+    setError(userNumber, 'Phone number is required');
+  } else {
+      setSuccess(userNumber);
+  }
+}
 
 // add active class in smaller screens
 hamburger.addEventListener("click", mobileMenu);
@@ -36,90 +95,78 @@ document.getElementById('scrollTop').addEventListener('click', function () {
     top: 0,
     behavior: 'smooth'
   })
-});
+})
 
-// portfolio section buttons
-const btnAll = document.getElementById('btnAll')
-const btnWeb = document.getElementById('btnWeb');
-const btnAdvertising = document.getElementById('btnAdvertising');
-const btnSmm = document.getElementById('btnSmm');
-const btnBusiness = document.getElementById('btnBusiness');
-
-const all = Array.from(document.querySelectorAll('.item'));
-const web = Array.from(document.querySelectorAll('.web'));
-const advertising = Array.from(document.querySelectorAll('.advertising'));
-const smm = Array.from(document.querySelectorAll('.smm'));
-const business = Array.from(document.querySelectorAll('.business'));
-
+// logic for portfolio section buttons
 btnAll.addEventListener('click', function() {
     all.forEach(item => {
-        item.style.display = "inline-block"
+        item.style.display = "inline-block";
     })
 })
 
 btnWeb.addEventListener('click', function() {
     web.forEach(item => {
         item.style.display = "inline-block";
-    });
+    })
     advertising.forEach(item => {
-        item.style.display = "none"
-    });
+        item.style.display = "none";
+    })
     smm.forEach(item => {
-        item.style.display = "none"
+        item.style.display = "none";
     })
     business.forEach(item => {
-      item.style.display = "none"
+      item.style.display = "none";
   })
 })
 
 btnAdvertising.addEventListener('click', function() {
     web.forEach(item => {
         item.style.display = "none";
-    });
+    })
     advertising.forEach(item => {
-        item.style.display = "inline-block"
-    });
+        item.style.display = "inline-block";
+    })
     smm.forEach(item => {
-        item.style.display = "none"
+        item.style.display = "none";
     })
     business.forEach(item => {
-      item.style.display = "none"
+      item.style.display = "none";
   })
 })
 
 btnSmm.addEventListener('click', function() {
     web.forEach(item => {
         item.style.display = "none";
-    });
+    })
     advertising.forEach(item => {
-        item.style.display = "none"
-    });
+        item.style.display = "none";
+    })
     smm.forEach(item => {
-        item.style.display = "inline-block"
+        item.style.display = "inline-block";
     })
     business.forEach(item => {
-      item.style.display = "none"
+      item.style.display = "none";
   })
 })
 
 btnBusiness.addEventListener('click', function() {
   web.forEach(item => {
       item.style.display = "none";
-  });
+  })
   advertising.forEach(item => {
-      item.style.display = "none"
-  });
+      item.style.display = "none";
+  })
   smm.forEach(item => {
-      item.style.display = "none"
+      item.style.display = "none";
   })
   business.forEach(item => {
-    item.style.display = "inline-block"
+    item.style.display = "inline-block";
 })
 })
 
 // add active-btn class to the current button
 let btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
+let btns = btnContainer.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function(){
     var current = document.getElementsByClassName("active-btn");
@@ -127,8 +174,6 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active-btn";
   });
 }
-
-const lorem60 = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, debitis laborum eveniet cumque odit qui ipsum alias doloribus voluptatibus harum magnam quod recusandae voluptatum nulla corrupti, eos reprehenderit? Ut quam, aut nihil rerum tenetur expedita culpa natus officia itaque provident harum fugiat, odit officiis excepturi labore doloremque! Libero rem, sequi expedita facilis eum tempore blanditiis repellat porro voluptatibus hic suscipit!"
 
 let modalInfo = {
   1: {
@@ -196,7 +241,7 @@ for(let i = 0; i < btn.length; i++){
     var project = btn[i].parentElement.parentElement.parentElement.parentElement;
     openModal(project);
   })
-};
+}
 
 function openModal(project){
   var id = project.id;
