@@ -148,7 +148,7 @@ header a {
     transition: all 100ms ease;
 }
 
-.call-to-action span, .form span {
+.call-to-action span, .form .submit span {
     position: absolute;
     opacity: 0;
     top: 0;
@@ -1100,58 +1100,6 @@ footer .bottom_content section{
 
 }
 
-#form, #info {
-    width: 40vw;
-    height: 25rem;
-    display: flex;
-    justify-content: center;
-    border-radius: 20px;
-    transform: translateY(-12.5rem);
-}
-
-#form {
-    color: #fff;
-    background-color: rgb(9, 91, 97);
-}
-
-#form input, #form textarea {
-    border: none;
-    outline: none;
-    border-radius: 5px;
-}
-
-#form input:focus, #form textarea:focus {
-    outline: 3px solid rgb(25, 0, 255);
-}
-
-#form button {
-    position: relative;
-    font-size: 1.3rem;
-    padding: 0.6rem 0;
-    border: none;
-    border-radius: 10px;
-    text-decoration: none;
-    color: #fff;
-    background-color: rgb(1, 140, 165);
-    transition: all 0.1s ease;
-}
-
-#form button:hover {
-    cursor: pointer;
-    background-color: rgb(31, 182, 209);
-    transform: scale(1.05);
-}
-
-#info {
-    color: #fff;
-    background-color: rgb(6, 151, 42);
-}
-
-#info a {
-    text-decoration: none;
-    color: #fff;
-}
-
 .form {
     width: 100%;
 }
@@ -1162,17 +1110,43 @@ footer .bottom_content section{
     padding: 1rem 0;
 }
 
+.form h4 {
+    color: #000;
+}
+
 .form-row {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.form-row #inputName, .form-row #inputTelNumber, 
-.form-row #inputEmail, .form-row #message {
+#form-block, #info {
+    width: 40vw;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    transform: translateY(-12.5rem);
+}
+
+#form-block {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+#form-block input, #form-block textarea {
+    border-radius: 5px;
     font-size: 1.1rem;
-    padding: 0.3rem 0.7rem;
-    margin: 0.3rem auto;
+    padding: 0.35rem 0.7rem;
+    border: 2px solid #666;
+}
+
+#form-block input:focus, #form-block textarea:focus {
+    outline: 0;
+}
+
+.form-row .input-control {
+    margin: 0.5rem auto;
 }
 
 .form-row #inputName, .form-row #inputTelNumber {
@@ -1187,6 +1161,48 @@ footer .bottom_content section{
     display: flex;
     gap: 2vw;
     justify-content: center;
+}
+
+#input-name-control.success input, #input-number-control.success input {
+    border-color: #04991d;
+}
+
+#input-name-control.error input, #input-number-control.error input{
+    border-color: #df2f04;
+}
+
+.input-control .error {
+    color: #f00;
+    font-size: 12px;
+    height: 13px;
+}
+
+#form-block button {
+    position: relative;
+    font-size: 1.3rem;
+    padding: 0.6rem 0;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(2, 111, 131);
+    transition: all 0.1s ease;
+}
+
+#form-block button:hover {
+    cursor: pointer;
+    background-color: rgb(3, 73, 85);
+    transform: scale(1.05);
+}
+
+#info {
+    color: #fff;
+    background-color: rgba(3, 112, 30, 0.8);
+}
+
+#info a {
+    text-decoration: none;
+    color: #fff;
 }
 
 .info h4 {
@@ -1266,7 +1282,7 @@ footer .bottom_content section{
         object-fit: cover;
     }
 
-    #form, #info {
+    #form-block, #info {
         width: 85vw;
     }
 
@@ -1292,11 +1308,11 @@ footer .bottom_content section{
         top: 15%;
     }
 
-    #form, #info {
+    #form-block, #info {
         transform: translateY(-9rem);
     }
 
-    #form {
+    #form-block {
         height: 28.5rem;
     }
 
